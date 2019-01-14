@@ -1,0 +1,11 @@
+.channel {
+  margin: 0 16px;
+}
+
+.channel:first-of-type {
+  border-left: 0 none;
+}
+
+.channel:last-of-type {
+  border-right: 0 none;
+}

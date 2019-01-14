@@ -1,0 +1,17 @@
+.header {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 24px;
+  font-weight: 700;
+
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row-start: 1;
+  grid-row-end: span 3;
+}

@@ -1,0 +1,22 @@
+<div class="layout-grid">
+  <h1 id="header" class="header"></h1>
+
+  <div id="level" class="level" role="note"></div>
+
+  <label id="fader-label" class="visually-hidden">Fader</label>
+  <input id="fader" class="fader" type="range" min="0" max="100" step="1" value="0" aria-labelledby="fader-label header" aria-orientation="vertical">
+
+  <button id="solo" type="button" class="button button-solo" aria-pressed="false" aria-labelledby="button-solo-label header" title="Solo">
+    <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+      <path d="M3 17.318C3.085 20.298 5.208 24 11.356 24 16.179 24 20 21.644 20 17.116c0-3.685-2.462-5.318-6.029-6.244l-4.008-1.06c-2.225-.555-3.26-1.767-3.26-3.4 0-2.457 2.088-3.82 4.958-3.82 3.244 0 4.942 1.733 5.146 3.938h2.938C19.643 2.07 15.67 0 11.73 0 7.57 0 3.696 2.306 3.696 6.614c0 3.585 2.667 5.319 5.418 6.026l4.076 1.06c2.581.656 3.787 1.733 3.787 3.635 0 2.508-2.072 4.056-5.299 4.056-3.566 0-5.485-1.851-5.706-4.073H3z"></path>
+    </svg>
+    <span id="button-solo-label" class="visually-hidden">Solo</span>
+  </button>
+
+  <button id="mute" type="button" class="button button-mute" aria-pressed="false" aria-labelledby="button-mute-label header" title="Mute">
+    <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+      <path d="M3.787 24V6.558h.089l6.81 15.438h2.61l6.81-15.438h.106V24H23V0h-3l-7.956 18.55h-.07L3.998 0H1v24h2.787z"></path>
+    </svg>
+    <span id="button-mute-label" class="visually-hidden">Mute</span>
+  </button>
+</div>

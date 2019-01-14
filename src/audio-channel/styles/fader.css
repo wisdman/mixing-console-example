@@ -1,0 +1,99 @@
+.fader {
+  display: block;
+  appearance: none;
+
+  margin: 0;
+  padding: 0;
+
+  color: inherit;
+  background-color: transparent;
+
+  grid-column-start: 1;
+  grid-column-end: -7;
+  grid-row-start: 6;
+  grid-row-end: -1;
+
+  transform-origin: top left;
+  transform: rotate(-90deg) translate(-100%,0);
+
+  --columns-size: calc(var(--grid-columns) - 6);
+  --row-size: calc(var(--grid-rows) - 5);
+
+  width: calc(100% / var(--columns-size) * var(--row-size));
+  height: calc(100% / var(--row-size) * var(--columns-size));
+
+  background-image:
+    linear-gradient(to bottom, #000 0%, #333 100%),
+    linear-gradient(to right, rgba(255,255,255,.2) 1px, transparent 2px, transparent 100%);
+  background-size: 100% 4px, 13px 100%;
+  background-position: 0 50%, -6px 0;
+  background-repeat: no-repeat, repeat-x;
+
+  outline: none;
+  cursor: default;
+}
+
+.fader:focus,
+.fader:active {
+  color: var(--color-main);
+}
+
+.fader::-webkit-slider-runnable-track {
+  height: 80%;
+}
+
+.fader::-moz-range-track {
+  height: 80%;
+}
+
+.fader::-webkit-slider-thumb {
+  appearance: none;
+
+  width: 10%;
+  height: 100%;
+
+  background-color: currentColor;
+  background-image: linear-gradient(to right, #777 0%, #333 20%, #222 46%, transparent 50%, #222 54%, #333 80%, #777 100%);
+  background-position: 50%;
+  background-repeat: no-repeat;
+
+  border: 0 none;
+  border-radius: 2px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4), -5px 0 8px rgba(0, 0, 0, 0.3);
+
+  cursor: grab;
+}
+
+.fader::-moz-range-thumb {
+  appearance: none;
+
+  width: 10%;
+  height: 80%;
+
+  background-color: currentColor;
+  background-image: linear-gradient(to right, #777 0%, #333 20%, #222 46%, transparent 50%, #222 54%, #333 80%, #777 100%);
+  background-position: 50%;
+  background-repeat: no-repeat;
+
+  border: 0 none;
+  border-radius: 2px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4), -5px 0 8px rgba(0, 0, 0, 0.3);
+
+  cursor: grab;
+
+}
+
+.fader::-webkit-slider-thumb:hover {
+  color: var(--color-main);
+}
+
+.fader::-moz-range-thumb:hover {
+  color: var(--color-main);
+}
+
+.fader:active::-webkit-slider-thumb {
+  cursor: grabbing;
+}
+.fader:active::-moz-range-thumb {
+  cursor: grabbing;
+}

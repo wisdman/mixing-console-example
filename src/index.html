@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
+  <title>Audio mixing console UI</title>
+
+  <link rel="stylesheet" type="text/css" href="styles/index.css">
+</head>
+<body>
+  <audio-channel data-mp3="mp3/ch-1.mp3" class="channel" label="CH 1" min="0" max="2" step="0.01"></audio-channel>
+  <audio-channel data-mp3="mp3/ch-2.mp3" class="channel" label="CH 2" min="0" max="2" step="0.01"></audio-channel>
+  <audio-channel data-mp3="mp3/ch-3.mp3" class="channel" label="CH 3" min="0" max="2" step="0.01"></audio-channel>
+  <audio-channel id="mic" class="channel" label="MIC" min="0" max="2" step="0.01"></audio-channel>
+  <div id="wrapper" class="wrapper">
+    <p>Attention! This page contains sound effects.</p>
+    <p>Touch/Click the screen to activate.</p>
+  </div>
+</body>
+</html>
