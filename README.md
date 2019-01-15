@@ -21,7 +21,7 @@ Audio mixing console example PWA without dependencies. An overview of the develo
 
 ```bash
 git clone https://github.com/wisdman/mixing-console-example.git
-cd mixing-console
+cd mixing-console-example
 npm install
 npm start
 ```
