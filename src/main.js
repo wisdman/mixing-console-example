@@ -4,13 +4,23 @@ export default async function() {
   // User action for activate AudioContext
   await new Promise(resolve => {
     const wrapper = document.getElementById("wrapper")
-    wrapper.addEventListener( window.PointerEvent ? "pointerdown" : "touchstart", (event) => {
-      event.preventDefault()
-      wrapper.parentNode.removeChild(wrapper)
-      resolve()
-    })
-  })
+    if (window.PointerEvent) {
+      wrapper.addEventListener("pointerdown", (event) => {
+        event.preventDefault()
+        resolve(wrapper)
+      })
+    } else {
+      wrapper.addEventListener("touchstart", (event) => {
+        event.preventDefault()
+        resolve(wrapper)
+      })
 
+      wrapper.addEventListener("click", (event) => {
+        event.preventDefault()
+        resolve(wrapper)
+      })
+    }
+  }).then(wrapper => wrapper.parentNode.removeChild(wrapper))
 
   const AudioContext = window.AudioContext || window.webkitAudioContext
   const audioContext = new AudioContext()
@@ -29,6 +39,8 @@ export default async function() {
 
       source.loop = true
       source.start(0)
+
+      console.dir(source)
 
       return { channel, source }
     })
@@ -65,6 +77,8 @@ export default async function() {
         const level = event.inputBuffer.getChannelData(0).reduce( (m, v) => Math.max(m, v), 0)
         channel.level = level * 100
       })
+
+
 
       channel.addEventListener("change", ({detail}) => {
         if (channel.solo) {
