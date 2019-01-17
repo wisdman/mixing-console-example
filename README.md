@@ -6,7 +6,11 @@
 
 ## Audio mixing console UI
 
-Audio mixing console example PWA without dependencies. An overview of the development process can be found at the [YouTube video](https://www.youtube.com/channel/UC5aAASf82169G4T4QvEAhng). This video is in Russian, as my English is not enough to speak fluently.
+Audio mixing console example PWA without dependencies. An overview of the development process can be found at the [YouTube video](https://youtu.be/f62kjyAIqLA). This video is in Russian, as my English is not enough to speak fluently.
+
+### Demo
+
+[Audio mixing console Demo Page](https://demo.ajaw.it/mixing-console-example/)
 
 ### Features
 
