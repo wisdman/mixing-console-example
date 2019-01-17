@@ -1,6 +1,6 @@
 {
   "name": "mixing-console-example",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Audio mixing console UI",
   "author": "Dmitriy Poliakov aka Wisdman <wisdman@ajaw.it> (https://github.com/wisdman)",
   "license": "MIT",
